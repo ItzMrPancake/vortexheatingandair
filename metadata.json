@@ -1,0 +1,6 @@
+{
+  "name": "Vortex Heating & Air Solutions",
+  "description": "Expert heating, air conditioning, and commercial refrigeration in Waxahachie & DFW, TX. Free second opinions, licensed TACLA115421E, and 24/7 service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
