@@ -8,13 +8,37 @@
   }
 }
 
-/* Clean modern brand accent utilities */
-.text-brand-gradient {
-  background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@layer base {
+  :root {
+    --bg-main: #0a0e17;
+    --bg-surface: #111726;
+    --bg-surface-elevated: #161f33;
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --border-soft-hover: rgba(255, 255, 255, 0.15);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #e2e8f0;
+  }
 }
 
-.text-vortex-accent {
-  color: #e11d48;
+.bg-canvas {
+  background-color: #0a0e17;
+}
+
+.bg-surface {
+  background-color: #111726;
+}
+
+.bg-surface-elevated {
+  background-color: #161f33;
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-subtle-hover:hover {
+  border-color: rgba(255, 255, 255, 0.16);
 }

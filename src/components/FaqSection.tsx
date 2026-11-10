@@ -10,36 +10,36 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faqs" className="py-16 bg-slate-900 text-white border-b border-slate-800">
+    <section id="faqs" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center space-y-2 mb-10">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-950/70 border border-sky-800/60">
+        <div className="text-center space-y-2.5 mb-10">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20">
             <HelpCircle className="w-3.5 h-3.5" />
             Frequently Asked Questions
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
             Clear Answers To Your HVAC Questions
           </h2>
-          <p className="text-slate-300 text-sm">
+          <p className="text-slate-300 text-sm max-w-xl mx-auto">
             Everything you need to know about our services, flat-rate pricing integrity, and warranties.
           </p>
         </div>
 
         {/* Accordion */}
-        <div className="space-y-2.5">
+        <div className="space-y-3">
           {FAQS.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={idx}
-                className="rounded-xl bg-slate-950 border border-slate-800 overflow-hidden transition-colors"
+                className="rounded-2xl bg-[#111726] border border-white/[0.08] overflow-hidden transition-colors"
               >
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full p-4 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900 transition-colors"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-white/[0.02] transition-colors"
                 >
                   <span className="text-sm font-bold text-white">
                     {faq.q}
@@ -52,7 +52,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-0 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-1">
+                  <div className="px-5 pb-5 pt-0 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/[0.06] mt-1">
                     {faq.a}
                   </div>
                 )}
@@ -62,7 +62,7 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* More questions banner */}
-        <div className="mt-8 p-4 rounded-xl bg-slate-950 border border-slate-800 text-center space-y-1">
+        <div className="mt-8 p-4 rounded-xl bg-[#111726] border border-white/[0.08] text-center space-y-1">
           <p className="text-xs text-slate-300">
             Have a specific HVAC or commercial refrigeration question?
           </p>

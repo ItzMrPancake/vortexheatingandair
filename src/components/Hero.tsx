@@ -17,13 +17,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
   ];
 
   return (
-    <section className="relative bg-slate-950 text-slate-100 border-b border-slate-800/80 py-10 lg:py-14">
+    <section className="relative bg-[#0A0E17] text-slate-100 border-b border-white/[0.08] py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column (7 cols): Clean Typographic Proposition */}
-          <div className="lg:col-span-7 space-y-5">
+          {/* Left Column (7 cols): Typographic Hierarchy & Streamlined CTAs */}
+          <div className="lg:col-span-7 space-y-6">
             
             {/* Trust Kicker */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
@@ -31,24 +31,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
               <span aria-hidden="true" className="text-slate-600">·</span>
               <span className="text-slate-300">TACLA115421E</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
-              <span className="inline-flex items-center gap-1 text-slate-200">
+              <span className="inline-flex items-center gap-1.5 text-slate-200">
                 <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 <strong className="text-white">5.0</strong> (329+ Google Reviews)
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12] text-balance">
+            {/* Display Headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.14] text-balance">
               Mastering Your Home’s Climate Control <span className="text-sky-400">One VORTEX At A Time.</span>
             </h1>
 
-            {/* Subhead */}
-            <p className="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed">
+            {/* Subhead with proper bottom spacing */}
+            <p className="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed pb-1">
               Expert heating, air conditioning, and commercial refrigeration in Ellis County and North Texas. Upfront flat-rate pricing, certified technicians, and 100% free second opinions.
             </p>
 
             {/* Trust Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-300 pb-2">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-rose-400 shrink-0" />
                 <span><strong>Free 2nd Opinions:</strong> Never get pressured into replacing</span>
@@ -67,45 +67,48 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            {/* Streamlined CTA Hierarchy: 1 Primary Bright Button + Muted Outline */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+              {/* Primary Action */}
               <button
                 onClick={() => onOpenBooking()}
-                className="px-6 py-3 bg-sky-400 hover:bg-sky-300 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+                className="px-6 py-3.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-sky-500/15 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
               >
                 <Calendar className="w-4 h-4 text-slate-950" />
                 <span>Schedule Service</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
+              {/* Muted Secondary Outline */}
               <button
                 onClick={() => onOpenBooking('Free HVAC Second Opinion', '2NDOPIN')}
-                className="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-rose-300 hover:text-rose-200 border border-rose-500/40 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                className="px-5 py-3.5 bg-transparent hover:bg-white/[0.04] text-slate-200 hover:text-white border border-white/[0.12] hover:border-white/[0.25] rounded-xl text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <ShieldCheck className="w-4 h-4 text-rose-400" />
-                <span>Get Free 2nd Opinion</span>
+                <span>Free 2nd Opinion</span>
               </button>
 
+              {/* Tertiary Hotline link */}
               <a
                 href={`tel:${COMPANY_INFO.phoneCallNow}`}
-                className="px-4 py-3 text-slate-200 hover:text-sky-400 font-bold text-xs flex items-center justify-center gap-1.5"
+                className="px-3 py-3 text-slate-300 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-rose-400" />
+                <Phone className="w-3.5 h-3.5 text-rose-500" />
                 <span>(469) 309-6778</span>
               </a>
             </div>
 
             {/* Quick issue selection */}
-            <div className="pt-2 border-t border-slate-800">
+            <div className="pt-3 border-t border-white/[0.08]">
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
                 Quick Problem Triage:
               </span>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-2">
                 {quickIssues.map((item) => (
                   <button
                     key={item.label}
                     onClick={() => onSelectTriage(item.value)}
-                    className="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-300 transition-colors cursor-pointer shadow-xs"
+                    className="px-3 py-1.5 rounded-lg bg-[#111726] hover:bg-[#161f33] border border-white/[0.08] hover:border-white/[0.15] text-xs font-medium text-slate-300 transition-colors cursor-pointer shadow-xs"
                   >
                     {item.label}
                   </button>
@@ -117,7 +120,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
 
           {/* Right Column (5 cols): Focused Visual Card */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl relative">
+            <div className="rounded-2xl overflow-hidden border border-white/[0.08] bg-[#111726] shadow-xl relative">
               <div className="aspect-[4/3] w-full relative">
                 <img
                   src="./images/hero_hvac_home_1794328676909.jpg"
@@ -129,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
                 />
                 
                 {/* Floating badge */}
-                <div className="absolute bottom-3 left-3 right-3 bg-slate-950/90 backdrop-blur-md rounded-xl p-3 border border-slate-800 shadow-sm flex items-center justify-between gap-3">
+                <div className="absolute bottom-3 left-3 right-3 bg-[#0A0E17]/90 backdrop-blur-md rounded-xl p-3 border border-white/[0.08] shadow-sm flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-sky-950/80 border border-sky-800/60 text-sky-400 flex items-center justify-center shrink-0">
                       <Award className="w-4 h-4" />
@@ -149,21 +152,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onSelectTriage }) => 
 
         </div>
 
-        {/* 4-Column Proof Row */}
-        <div className="mt-8 pt-6 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+        {/* 4-Column Proof Row with Softened Hairline Borders */}
+        <div className="mt-10 pt-8 border-t border-white/[0.08] grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08]">
             <div className="text-xl sm:text-2xl font-black text-white font-mono tabular-nums">5.0 ★</div>
             <div className="text-[11px] text-slate-400 font-medium">329+ Google Reviews</div>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+          <div className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08]">
             <div className="text-xl sm:text-2xl font-black text-rose-400 font-mono tabular-nums">$0 Fee</div>
             <div className="text-[11px] text-slate-400 font-medium">Free 2nd Opinions</div>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+          <div className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08]">
             <div className="text-xl sm:text-2xl font-black text-sky-400 font-mono tabular-nums">38 Cities</div>
             <div className="text-[11px] text-slate-400 font-medium">DFW Metroplex &amp; Ellis</div>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+          <div className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08]">
             <div className="text-xl sm:text-2xl font-black text-white font-mono tabular-nums">TACLA</div>
             <div className="text-[11px] text-slate-400 font-medium">#115421E Licensed</div>
           </div>

@@ -15,19 +15,19 @@ export const ServiceAreaFinder: React.FC<ServiceAreaProps> = ({ onScheduleForCit
   );
 
   return (
-    <section id="service-areas" className="py-16 bg-slate-900 text-white border-b border-slate-800">
+    <section id="service-areas" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-2 mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-950/70 border border-sky-800/60">
+        <div className="max-w-3xl mx-auto text-center space-y-2.5 mb-8">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20">
             <MapPin className="w-3.5 h-3.5" />
             Waxahachie &amp; 38 Surrounding Communities
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
             Serving North &amp; Central Texas
           </h2>
-          <p className="text-slate-300 text-sm leading-relaxed">
+          <p className="text-slate-300 text-sm leading-relaxed max-w-xl mx-auto">
             Headquartered at 261 Park Meadows Drive in Waxahachie, TX. Dispatched daily across Ellis, Dallas, Johnson, Tarrant, and Kaufman counties.
           </p>
         </div>
@@ -40,15 +40,15 @@ export const ServiceAreaFinder: React.FC<ServiceAreaProps> = ({ onScheduleForCit
             placeholder="Type your city (e.g. Midlothian, Arlington, Waxahachie...)"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs sm:text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors shadow-inner"
+            className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#111726] border border-white/[0.08] text-white text-xs sm:text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors shadow-inner"
           />
         </div>
 
         {/* Live Search Result Confirmation */}
         {searchQuery.trim().length > 0 && (
-          <div className="max-w-xl mx-auto mb-6 p-3 rounded-xl bg-sky-950/80 border border-sky-800 text-center space-y-1">
+          <div className="max-w-xl mx-auto mb-6 p-3 rounded-xl bg-sky-500/10 border border-sky-500/20 text-center space-y-1">
             {filteredCities.length > 0 ? (
-              <p className="text-xs text-sky-200 font-semibold flex items-center justify-center gap-1.5">
+              <p className="text-xs text-sky-300 font-semibold flex items-center justify-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-sky-400" />
                 Yes! We provide daily service dispatch to {filteredCities[0].name} with zero travel surcharges.
               </p>
@@ -60,16 +60,16 @@ export const ServiceAreaFinder: React.FC<ServiceAreaProps> = ({ onScheduleForCit
           </div>
         )}
 
-        {/* 38 Cities Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+        {/* 38 Cities Grid with clean equal cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
           {filteredCities.map((city) => (
             <button
               key={city.name}
               onClick={() => onScheduleForCity(city.name)}
-              className={`p-2.5 rounded-xl text-left transition-all border group cursor-pointer flex flex-col justify-between ${
+              className={`p-3 rounded-xl text-left transition-all border group cursor-pointer flex flex-col justify-between ${
                 city.isHeadquarters
-                  ? 'bg-slate-950 border-sky-500/80 shadow-sm ring-1 ring-sky-500/30'
-                  : 'bg-slate-950 border-slate-800/90 hover:border-slate-700 hover:bg-slate-900'
+                  ? 'bg-[#111726] border-sky-500/50 shadow-sm ring-1 ring-sky-500/20'
+                  : 'bg-[#111726] border-white/[0.08] hover:border-white/[0.18]'
               }`}
             >
               <div>
@@ -87,7 +87,7 @@ export const ServiceAreaFinder: React.FC<ServiceAreaProps> = ({ onScheduleForCit
                   {city.county}
                 </span>
               </div>
-              <span className="text-[10px] text-sky-400 mt-1 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-[10px] text-sky-400 mt-2 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                 Book here →
               </span>
             </button>

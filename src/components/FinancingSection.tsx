@@ -17,15 +17,15 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
   );
 
   return (
-    <section id="financing" className="py-16 bg-slate-950 text-white border-b border-slate-800">
+    <section id="financing" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 sm:p-10 shadow-lg">
+        <div className="rounded-3xl bg-[#111726] border border-white/[0.08] p-6 sm:p-10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column (7 cols) */}
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-950/70 border border-sky-800/60">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20">
                 <CreditCard className="w-3.5 h-3.5" />
                 Flexible Home Comfort Financing
               </div>
@@ -61,7 +61,7 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
               <div className="pt-2">
                 <button
                   onClick={onApply}
-                  className="px-5 py-2.5 bg-sky-400 hover:bg-sky-300 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-lg shadow-sm flex items-center gap-2 cursor-pointer transition-colors"
+                  className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-xl shadow-sm flex items-center gap-2 cursor-pointer transition-colors"
                 >
                   <span>Apply For Financing Online</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -70,7 +70,7 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
             </div>
 
             {/* Right Column (5 cols): Estimator Widget */}
-            <div className="lg:col-span-5 bg-slate-950 p-5 sm:p-6 rounded-xl border border-slate-800 space-y-4">
+            <div className="lg:col-span-5 bg-[#0A0E17] p-5 sm:p-6 rounded-2xl border border-white/[0.08] space-y-4">
               <div className="space-y-0.5">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-sky-400">Monthly Estimator</span>
                 <h3 className="text-base font-bold text-white">Estimate Your Installment</h3>
@@ -90,7 +90,7 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
                   step="500"
                   value={estimatedCost}
                   onChange={(e) => setEstimatedCost(Number(e.target.value))}
-                  className="w-full accent-sky-400 h-2 bg-slate-800 rounded-lg cursor-pointer"
+                  className="w-full accent-sky-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 font-mono">
                   <span>$3,000</span>
@@ -112,8 +112,8 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
                       onClick={() => setTermMonths(months)}
                       className={`py-1.5 text-xs font-bold rounded-lg border transition-colors cursor-pointer ${
                         termMonths === months
-                          ? 'bg-sky-400 text-slate-950 border-sky-400'
-                          : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'
+                          ? 'bg-sky-500 text-slate-950 border-sky-500'
+                          : 'bg-[#111726] text-slate-300 border-white/[0.08] hover:border-white/[0.15]'
                       }`}
                     >
                       {months} Mo
@@ -123,7 +123,7 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
               </div>
 
               {/* Payment Output */}
-              <div className="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-center space-y-0.5">
+              <div className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08] text-center space-y-0.5">
                 <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Estimated Monthly</span>
                 <div className="text-2xl font-extrabold text-sky-400 font-mono tabular-nums">
                   ${estimatedMonthly} <span className="text-xs text-slate-400 font-normal">/ mo*</span>
@@ -135,7 +135,7 @@ export const FinancingSection: React.FC<FinancingProps> = ({ onApply }) => {
 
               <button
                 onClick={onApply}
-                className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full py-2.5 bg-white/[0.08] hover:bg-white/[0.14] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors border border-white/[0.08] flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Check Pre-Approval</span>
                 <ArrowRight className="w-3.5 h-3.5" />

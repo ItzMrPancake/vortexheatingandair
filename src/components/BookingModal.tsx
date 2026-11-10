@@ -73,12 +73,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-in fade-in duration-150">
-      <div className="relative w-full max-w-lg bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-6 sm:p-7 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-[#111726] border border-white/[0.08] rounded-3xl shadow-2xl p-6 sm:p-7 max-h-[90vh] overflow-y-auto">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 transition-colors cursor-pointer"
+          className="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] transition-colors cursor-pointer"
           aria-label="Close dialog"
         >
           <X className="w-4 h-4" />
@@ -86,7 +86,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
         {submitted ? (
           <div className="py-6 text-center space-y-3">
-            <div className="w-12 h-12 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-800">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/20">
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white">Service Request Received!</h3>
@@ -97,7 +97,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             <div className="pt-2">
               <button
                 onClick={onClose}
-                className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold cursor-pointer"
+                className="px-5 py-2 bg-white/[0.08] hover:bg-white/[0.14] text-white rounded-xl text-xs font-semibold cursor-pointer border border-white/[0.08]"
               >
                 Done
               </button>
@@ -119,7 +119,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
 
             {/* Emergency Toggle */}
-            <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
+            <div className="p-2.5 rounded-xl bg-[#0A0E17] border border-white/[0.08] flex items-center justify-between">
               <span className="text-xs text-slate-300 font-medium">Is this a 24/7 same-day emergency?</span>
               <label className="flex items-center gap-1.5 cursor-pointer text-xs font-bold text-rose-400">
                 <input
@@ -146,8 +146,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     setFormData({ ...formData, firstName: e.target.value });
                     if (errors.firstName) setErrors((prev) => ({ ...prev, firstName: '' }));
                   }}
-                  className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs ${
-                    errors.firstName ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                  className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs ${
+                    errors.firstName ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                   }`}
                 />
                 {errors.firstName && <p className="text-[10px] text-red-400 mt-0.5">{errors.firstName}</p>}
@@ -160,7 +160,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="Doe"
                   value={formData.lastName}
                   onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:border-sky-400"
+                  className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:border-sky-400"
                 />
               </div>
             </div>
@@ -176,8 +176,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="(469) 000-0000"
                   value={formData.phone}
                   onChange={handlePhoneChange}
-                  className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs ${
-                    errors.phone ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                  className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs ${
+                    errors.phone ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                   }`}
                 />
                 {errors.phone && <p className="text-[10px] text-red-400 mt-0.5">{errors.phone}</p>}
@@ -195,8 +195,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     setFormData({ ...formData, email: e.target.value });
                     if (errors.email) setErrors((prev) => ({ ...prev, email: '' }));
                   }}
-                  className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs ${
-                    errors.email ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                  className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs ${
+                    errors.email ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                   }`}
                 />
                 {errors.email && <p className="text-[10px] text-red-400 mt-0.5">{errors.email}</p>}
@@ -210,7 +210,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <select
                   value={formData.serviceType}
                   onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:border-sky-400"
+                  className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:border-sky-400"
                 >
                   <option value="Air Conditioning Repair">AC Repair &amp; Diagnostics</option>
                   <option value="AC Installation & Replacement">New AC Installation</option>
@@ -228,7 +228,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <select
                   value={formData.city}
                   onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:border-sky-400"
+                  className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:border-sky-400"
                 >
                   {SERVICE_CITIES.map((c) => (
                     <option key={c.name} value={c.name}>{c.name}</option>
@@ -247,13 +247,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 placeholder="e.g. Unit is blowing warm, fan not turning..."
-                className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:border-sky-400 resize-none"
+                className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:border-sky-400 resize-none"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2.5 bg-sky-400 hover:bg-sky-300 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+              className="w-full py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
             >
               <Send className="w-3.5 h-3.5 text-slate-950" />
               <span>Confirm &amp; Request Dispatch</span>

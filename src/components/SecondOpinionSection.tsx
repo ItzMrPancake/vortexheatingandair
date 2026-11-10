@@ -18,16 +18,16 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
   };
 
   return (
-    <section id="second-opinion" className="py-16 bg-slate-900 text-white border-b border-slate-800">
+    <section id="second-opinion" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="rounded-3xl p-8 sm:p-10 bg-slate-950 border border-slate-800 shadow-xl">
+        <div className="rounded-3xl p-8 sm:p-10 bg-[#111726] border border-white/[0.08] shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Content (7 cols) */}
             <div className="lg:col-span-7 space-y-4">
               
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-400 uppercase tracking-widest px-3 py-1 rounded-full bg-rose-950/70 border border-rose-800/60">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-400 uppercase tracking-widest px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Vortex Second Opinion Guarantee
               </div>
@@ -43,7 +43,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
 
               {/* Comparison Box */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+                <div className="p-4 rounded-xl bg-[#0A0E17] border border-white/[0.08] space-y-1.5">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-rose-400 uppercase tracking-wider">
                     <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
                     Other DFW Companies
@@ -55,7 +55,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
                   </ul>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+                <div className="p-4 rounded-xl bg-[#0A0E17] border border-white/[0.08] space-y-1.5">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-wider">
                     <CheckCircle className="w-3.5 h-3.5 shrink-0" />
                     The Vortex Standard
@@ -69,7 +69,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
               </div>
 
               {/* Customer quote */}
-              <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 italic">
+              <div className="p-4 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-xs text-slate-300 italic">
                 “I had gotten 3 bids but was most impressed with Omar, which happened to be the lowest bid... fast, clean work and they stand behind their product!”
                 <span className="block mt-1 font-semibold text-rose-400 not-italic">— Desiree Childs (Verified Google Review)</span>
               </div>
@@ -78,7 +78,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
 
             {/* Right Interactive Form (5 cols) */}
             <div className="lg:col-span-5">
-              <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-sm space-y-4">
+              <div className="bg-[#0A0E17] p-6 rounded-2xl border border-white/[0.08] shadow-sm space-y-4">
                 <div className="space-y-0.5">
                   <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
                     <FileText className="w-4 h-4 text-sky-400" />
@@ -99,7 +99,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
                       placeholder="e.g. $12,500 or $1,800 for repair"
                       value={competitorQuote}
                       onChange={(e) => setCompetitorQuote(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors"
+                      className="w-full px-3 py-2 rounded-lg bg-[#111726] border border-white/[0.08] text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors"
                     />
                   </div>
 
@@ -110,7 +110,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
                     <select
                       value={equipmentAge}
                       onChange={(e) => setEquipmentAge(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
+                      className="w-full px-3 py-2 rounded-lg bg-[#111726] border border-white/[0.08] text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
                     >
                       <option value="Under 5 years">Under 5 years</option>
                       <option value="5-10 years">5 to 10 years</option>
@@ -129,7 +129,7 @@ export const SecondOpinionSection: React.FC<SecondOpinionProps> = ({ onRequestSe
                       value={competitorDiagnosis}
                       onChange={(e) => setCompetitorDiagnosis(e.target.value)}
                       placeholder="e.g. Bad compressor, cracked heat exchanger..."
-                      className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors resize-none"
+                      className="w-full px-3 py-2 rounded-lg bg-[#111726] border border-white/[0.08] text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors resize-none"
                     />
                   </div>
 

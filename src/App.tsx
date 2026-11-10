@@ -66,7 +66,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-sky-500 selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-canvas text-slate-100 flex flex-col selection:bg-sky-500 selection:text-slate-950 font-sans">
       
       {/* Primary Sticky Top Bar */}
       <Header

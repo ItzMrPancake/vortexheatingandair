@@ -97,14 +97,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-16 bg-slate-950 text-white border-b border-slate-800">
+    <section id="contact" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-950/70 border border-sky-800/60">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20">
               <Phone className="w-3.5 h-3.5" />
               Direct Texas Dispatch
             </div>
@@ -121,10 +121,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             <div className="space-y-2.5 pt-1">
               <a
                 href={`tel:${COMPANY_INFO.phoneCallNow}`}
-                className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors flex items-center justify-between group shadow-sm"
+                className="p-3.5 rounded-2xl bg-[#111726] border border-white/[0.08] hover:border-white/[0.18] transition-colors flex items-center justify-between group shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-rose-950/80 text-rose-400 border border-rose-800/60 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -139,10 +139,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
               <a
                 href={`tel:${COMPANY_INFO.phoneOffice}`}
-                className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors flex items-center justify-between group shadow-sm"
+                className="p-3.5 rounded-2xl bg-[#111726] border border-white/[0.08] hover:border-white/[0.18] transition-colors flex items-center justify-between group shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-sky-950/80 text-sky-400 border border-sky-800/60 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <span className="text-xs text-sky-400 font-bold">Call Office →</span>
               </a>
 
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs text-slate-300 shadow-sm">
+              <div className="p-4 rounded-2xl bg-[#111726] border border-white/[0.08] space-y-2 text-xs text-slate-300 shadow-sm">
                 <div className="flex items-center gap-2 text-white">
                   <MapPin className="w-4 h-4 text-sky-400 shrink-0" />
                   <span><strong>Headquarters:</strong> {COMPANY_INFO.address}, {COMPANY_INFO.cityStateZip}</span>
@@ -172,7 +172,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <p className="text-rose-400 font-semibold mt-0.5">{COMPANY_INFO.hours.emergency}</p>
                   </div>
                 </div>
-                <div className="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5 border-t border-slate-800">
+                <div className="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5 border-t border-white/[0.06]">
                   <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
                   <span>Texas HVAC License: #TACLA115421E</span>
                 </div>
@@ -183,11 +183,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
           {/* Right Column (7 cols): Sleek Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-7 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl">
+            <div className="p-6 sm:p-7 rounded-3xl bg-[#111726] border border-white/[0.08] shadow-xl">
               
               {submitted ? (
                 <div className="py-8 text-center space-y-3">
-                  <div className="w-14 h-14 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-800">
+                  <div className="w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/20">
                     <CheckCircle2 className="w-7 h-7" />
                   </div>
                   <h3 className="text-lg font-bold text-white">Request Confirmed!</h3>
@@ -198,7 +198,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <div className="pt-3">
                     <button
                       onClick={handleReset}
-                      className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold cursor-pointer"
+                      className="px-4 py-2 bg-white/[0.08] hover:bg-white/[0.14] text-white rounded-xl text-xs font-semibold cursor-pointer border border-white/[0.08]"
                     >
                       Submit Another Inquiry
                     </button>
@@ -206,13 +206,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3.5">
-                  <div className="border-b border-slate-800 pb-2.5 flex items-center justify-between">
+                  <div className="border-b border-white/[0.06] pb-2.5 flex items-center justify-between">
                     <div>
                       <h3 className="text-base font-bold text-white">Schedule Service Online</h3>
                       <p className="text-xs text-slate-400">Prompt response within business hours</p>
                     </div>
 
-                    <label className="flex items-center gap-1.5 text-xs font-semibold cursor-pointer select-none bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800">
+                    <label className="flex items-center gap-1.5 text-xs font-semibold cursor-pointer select-none bg-[#0A0E17] px-2.5 py-1 rounded-xl border border-white/[0.08]">
                       <input
                         type="checkbox"
                         checked={formData.isEmergency}
@@ -226,7 +226,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   </div>
 
                   {formData.isEmergency && (
-                    <div className="p-2.5 rounded-lg bg-rose-950/80 border border-rose-800/80 flex items-center gap-2 text-xs text-rose-300">
+                    <div className="p-2.5 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center gap-2 text-xs text-rose-300">
                       <AlertCircle className="w-4 h-4 text-rose-400 shrink-0" />
                       <span>Priority emergency flag enabled for rapid dispatch!</span>
                     </div>
@@ -246,8 +246,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           if (errors.firstName) setErrors((prev) => ({ ...prev, firstName: '' }));
                         }}
                         placeholder="John"
-                        className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
-                          errors.firstName ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                        className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
+                          errors.firstName ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                         }`}
                       />
                       {errors.firstName && <p className="text-[10px] text-red-400 mt-0.5">{errors.firstName}</p>}
@@ -260,7 +260,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                         placeholder="Doe"
-                        className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors"
+                        className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors"
                       />
                     </div>
                   </div>
@@ -276,8 +276,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         value={formData.phone}
                         onChange={handlePhoneChange}
                         placeholder="(469) 000-0000"
-                        className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
-                          errors.phone ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                        className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
+                          errors.phone ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                         }`}
                       />
                       {errors.phone && <p className="text-[10px] text-red-400 mt-0.5">{errors.phone}</p>}
@@ -295,8 +295,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           if (errors.email) setErrors((prev) => ({ ...prev, email: '' }));
                         }}
                         placeholder="john@example.com"
-                        className={`w-full px-3 py-2 rounded-lg bg-slate-950 border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
-                          errors.email ? 'border-red-500' : 'border-slate-800 focus:border-sky-400'
+                        className={`w-full px-3 py-2 rounded-xl bg-[#0A0E17] border text-white text-xs placeholder:text-slate-500 focus:outline-none transition-colors ${
+                          errors.email ? 'border-red-500' : 'border-white/[0.08] focus:border-sky-400'
                         }`}
                       />
                       {errors.email && <p className="text-[10px] text-red-400 mt-0.5">{errors.email}</p>}
@@ -310,7 +310,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       <select
                         value={formData.serviceType}
                         onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                        className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
+                        className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
                       >
                         <option value="Air Conditioning Repair">AC Repair &amp; Diagnostics</option>
                         <option value="AC Installation & Replacement">New AC Installation</option>
@@ -330,7 +330,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       <select
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
+                        className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs focus:outline-none focus:border-sky-400 transition-colors"
                       >
                         {SERVICE_CITIES.map((c) => (
                           <option key={c.name} value={c.name}>
@@ -350,10 +350,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           key={win}
                           type="button"
                           onClick={() => setFormData({ ...formData, preferredTime: win })}
-                          className={`py-1.5 px-2 text-xs font-semibold rounded-lg border transition-colors cursor-pointer ${
+                          className={`py-1.5 px-2 text-xs font-semibold rounded-xl border transition-colors cursor-pointer ${
                             formData.preferredTime === win
-                              ? 'bg-slate-800 text-white border-sky-400'
-                              : 'bg-slate-950 text-slate-400 border-slate-800 hover:border-slate-700'
+                              ? 'bg-sky-500 text-slate-950 border-sky-500 font-bold'
+                              : 'bg-[#0A0E17] text-slate-400 border-white/[0.08] hover:border-white/[0.18]'
                           }`}
                         >
                           {win}
@@ -372,13 +372,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="e.g. AC blowing warm air, outdoor unit buzzing..."
-                      className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors resize-none"
+                      className="w-full px-3 py-2 rounded-xl bg-[#0A0E17] border border-white/[0.08] text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-sky-400 transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 bg-sky-400 hover:bg-sky-300 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5 text-slate-950" />
                     <span>Submit Service Request</span>

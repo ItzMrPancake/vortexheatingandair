@@ -15,14 +15,14 @@ export const CommercialRefrigeration: React.FC<CommercialProps> = ({ onScheduleC
   ];
 
   return (
-    <section id="commercial" className="py-16 bg-slate-950 text-white border-b border-slate-800">
+    <section id="commercial" className="py-16 sm:py-20 bg-[#0A0E17] text-white border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column (6 cols) */}
           <div className="lg:col-span-6 space-y-4">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-950/70 border border-sky-800/60">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase tracking-widest px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20">
               <Building2 className="w-3.5 h-3.5" />
               Waxahachie &amp; DFW Commercial Division
             </div>
@@ -59,7 +59,7 @@ export const CommercialRefrigeration: React.FC<CommercialProps> = ({ onScheduleC
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
               <button
                 onClick={() => onScheduleCommercial('Commercial Refrigeration Repair')}
-                className="px-5 py-2.5 bg-sky-400 hover:bg-sky-300 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
                 <span>Request Commercial Dispatch</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -67,7 +67,7 @@ export const CommercialRefrigeration: React.FC<CommercialProps> = ({ onScheduleC
 
               <a
                 href={`tel:${COMPANY_INFO.phoneCallNow}`}
-                className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 rounded-lg text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                className="px-4 py-2.5 bg-white/[0.06] hover:bg-white/[0.12] text-slate-200 border border-white/[0.08] rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-rose-400" />
                 <span>Call: {COMPANY_INFO.phoneCallNow}</span>
@@ -82,7 +82,7 @@ export const CommercialRefrigeration: React.FC<CommercialProps> = ({ onScheduleC
 
           {/* Right Column (6 cols): Photo & Clean Grid */}
           <div className="lg:col-span-6 space-y-4">
-            <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-sm relative">
+            <div className="rounded-2xl overflow-hidden border border-white/[0.08] bg-[#111726] shadow-sm relative">
               <div className="aspect-[16/10] w-full relative">
                 <img
                   src="./images/commercial_hvac_1794328677346.jpg"
@@ -96,7 +96,7 @@ export const CommercialRefrigeration: React.FC<CommercialProps> = ({ onScheduleC
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {capabilities.map((cap, idx) => (
-                <div key={idx} className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-0.5">
+                <div key={idx} className="p-3.5 rounded-xl bg-[#111726] border border-white/[0.08] space-y-1">
                   <h4 className="text-xs font-bold text-white">{cap.title}</h4>
                   <p className="text-[11px] text-slate-400 leading-snug">{cap.desc}</p>
                 </div>
